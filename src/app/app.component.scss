@@ -227,8 +227,8 @@ div.carousel.slide {
 		height: 50px;
 		width: 50px;
 	}
-	.carousel-control-next {padding-left:7px }
-	.carousel-control-prev {padding-left:1px ;}
+	// .carousel-control-next {padding-left:7px }
+	// .carousel-control-prev {padding-left:1px ;}
 	
 	div.carousel-inner {
 		div.carousel-item {
@@ -493,6 +493,15 @@ div.product-wrapper {
 .gallery.nalepnice img:nth-of-type(2) { width: 300px;	margin:15px; }
 .gallery.nalepnice img:nth-of-type(3) { width: 200px;	margin:15px; }
 
+.gallery.kese span:first-of-type 	{ 
+	float:left;
+	width:60%;
+}
+.gallery.kese span:last-of-type 	{ 
+	float:right;
+	width:25%;
+	margin-right: 10%
+}
 
 
 
