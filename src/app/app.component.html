@@ -1,0 +1,53 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand"  routerLink="/home"><img src="./assets/ip-logo.png" style="width: 200px;" ></a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link active" (click)="setTitle( 'Interprint Kragujevac | Ofset i digitalna štampa' )" 
+           routerLink="/home" routerLinkActive="active" > 
+           Početna 
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" (click)="setTitle( 'InterPrint Kragujevac | Vizit karte, knjige, kalendari...' )" 
+           routerLink="/proizvodi/svi-proizvodi" routerLinkActive="active">
+           Proizvodi
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="setTitle( 'InterPrint Kragujevac | Reference' )" 
+           routerLink="/reference" routerLinkActive="active">
+           Reference
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" (click)="setTitle( 'InterPrint Kragujevac | Kontakt' )"
+           routerLink="/kontakt" routerLinkActive="active">
+           Kontakt
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" (click)="setTitle( 'InterPrint Kragujevac | Mudre misli, citati ' )" 
+           routerLink="/mudre-misli" routerLinkActive="active"> 
+           Mudre misli
+        </a>
+      </li>
+      
+    </ul> <!-- navbar-nav -->
+  </div> <!-- navbar-collapse -->
+</nav>
+
+<router-outlet> </router-outlet>  <!-- Glavna navigacija stranica -->
