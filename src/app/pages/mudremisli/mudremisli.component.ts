@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var $:any;
+declare var $: any;
 
 @Component({
   selector: 'app-mudremisli',
@@ -10,13 +10,13 @@ export class MudremisliComponent implements OnInit {
 
   constructor() { }
 
-  
+
   ngOnInit() {
     this.inactiveColor();
     }
-  
+
   inactiveColor() {
-    $(".nav-link.active").parent().parent().children().children().removeClass("active")
+    $('.nav-link.active').parent().parent().children().children().removeClass('active');
   }
 
 }

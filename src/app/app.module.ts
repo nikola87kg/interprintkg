@@ -18,13 +18,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsModule, productsRoutes } from './pages/products/products.module';
 
 const appRoutes: Routes = [
- { path: 'home', component: HomeComponent },
  { path: 'kontakt', component: ContactComponent },
  { path: 'proizvodi', component: ProductsComponent, children: productsRoutes },
  { path: 'reference', component: ReferencesComponent },
  { path: 'mudre-misli', component: MudremisliComponent },
- { path: '', redirectTo: '/home', pathMatch: 'full' },
- { path: '**', redirectTo: '/home' }
+ { path: '', redirectTo: '/proizvodi/svi-proizvodi', pathMatch: 'full' },
+ { path: '**', redirectTo: '/proizvodi/svi-proizvodi' }
 ];
 
 @NgModule({
