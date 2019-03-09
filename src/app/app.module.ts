@@ -16,6 +16,7 @@ import { MudremisliComponent } from './pages/mudremisli/mudremisli.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { ProductsModule, productsRoutes } from './pages/products/products.module';
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
  { path: 'kontakt', component: ContactComponent },
@@ -28,22 +29,23 @@ const appRoutes: Routes = [
 
 @NgModule({
  declarations: [
- AppComponent,
- ContactComponent,
- HomeComponent,
- ReferencesComponent,
- ProductsComponent,
- MudremisliComponent,
- FooterComponent,
+   AppComponent,
+   ContactComponent,
+   HomeComponent,
+   ReferencesComponent,
+   ProductsComponent,
+   MudremisliComponent,
+   FooterComponent,
+   HeaderComponent
  ],
  imports: [
- BrowserModule,
- FormsModule,
- HttpModule,
- AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNO5kdusRR1oxgM6Kwe3XVuUpYJSz6pzg' }),
- RouterModule.forRoot(appRoutes, { useHash: true } ),
- Ng2PageScrollModule.forRoot(),
- ProductsModule
+   BrowserModule,
+   FormsModule,
+   HttpModule,
+   AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNO5kdusRR1oxgM6Kwe3XVuUpYJSz6pzg' }),
+   RouterModule.forRoot(appRoutes, { useHash: true } ),
+   Ng2PageScrollModule.forRoot(),
+   ProductsModule
  ],
  providers: [Title],
  bootstrap: [AppComponent]

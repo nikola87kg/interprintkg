@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+
+  <button
+    class="navbar-toggler navbar-toggler-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a
+    class="navbar-brand"
+    routerLink="/home">
+    <img
+      src="./assets/ip-logo.png"
+      style="width: 200px;"/>
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" *ngFor="let item of navitems">
+        <a
+          class="nav-link"
+          [ngClass]="item.class"
+          [routerLink]="item.link"
+          routerLinkActive="active">
+          {{item.name}}
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

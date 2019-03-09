@@ -13,11 +13,7 @@ import { Title } from '@angular/platform-browser';
 
 
 export class AppComponent implements OnInit {
-    constructor(private router: Router, private titleService: Title) { }
-
-    public setTitle( newTitle: string) {
-        this.titleService.setTitle( newTitle );
-      }
+    constructor(private router: Router) { }
 
     ngOnInit() {
         this.closeNavigation();
