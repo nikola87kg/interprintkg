@@ -22,7 +22,7 @@ const appRoutes: Routes = [
  { path: 'kontakt', component: ContactComponent },
  { path: 'proizvodi', component: ProductsComponent, children: productsRoutes },
  { path: 'reference', component: ReferencesComponent },
- { path: 'mudre-misli', component: MudremisliComponent },
+ { path: 'motivacione-mudrosti', component: MudremisliComponent },
  { path: '', redirectTo: '/proizvodi/svi-proizvodi', pathMatch: 'full' },
  { path: '**', redirectTo: '/proizvodi/svi-proizvodi' }
 ];

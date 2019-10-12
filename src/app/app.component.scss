@@ -27,7 +27,6 @@ body {
 	box-sizing: border-box;
 }
 
-
 div.page-background {
 	width: calc(100vw);
 	height: 100px;
@@ -135,6 +134,7 @@ nav {
 				a.nav-link {
           color:white  !important;
           font-size: 18px;
+          font-weight: bold;
           text-transform: uppercase;
           min-width: 150px;
 
@@ -837,9 +837,23 @@ div.knjige {
 				right: 0;
 				top: 20px;
 			}
+			&.pdf-order {
+				right: 0;
+				top: 120px;
+			}
 			&.pdf-download {
 				right: 0;
 				top: 70px;
+			}
+			&.desktop-only {
+				@media (orientation: portrait)  {
+					display: none;
+				}
+			}
+			&.mobile-only {
+				@media (orientation: landscape)   {
+					display: none;
+				}
 			}
 			&:hover, &:active, &:focus {
 				text-decoration: none;

@@ -11,6 +11,6 @@ export class HeaderComponent  {
     {name: 'Početna',     class: 'home',      link: '/proizvodi/svi-proizvodi'},
     {name: 'Reference',   class: 'reference', link: '/reference'},
     {name: 'Kontakt',     class: 'contact',   link: '/kontakt'},
-    {name: 'Mudre misli', class: 'books',     link: '/mudre-misli'}
+    {name: 'Motivacione mudrosti', class: 'books',  link: '/motivacione-mudrosti'}
   ];
 }
