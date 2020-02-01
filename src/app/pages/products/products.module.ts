@@ -18,20 +18,20 @@ import { WebComponent } from './web/web.component';
 import { SveComponent } from './sve/sve.component';
 
 export const productsRoutes: Routes = [
- { path: 'blokovska-roba', component: BlokovskarobaComponent },
- { path: 'fascikle', component: FascikleComponent },
- { path: 'flajeri', component: FlajeriComponent },
- { path: 'kalendari', component: KalendariComponent },
- { path: 'rokovnici', component: RokovniciComponent },
- { path: 'nalepnice', component: NalepniceComponent },
- { path: 'kese', component: KeseComponent },
- { path: 'knjige', component: KnjigeComponent },
- { path: 'olovke', component: OlovkeComponent },
- { path: 'upaljaci', component: UpaljaciComponent },
- { path: 'reklamni-blokovi', component: ReklamniblokoviComponent },
- { path: 'vizit-karte', component: VizitkeComponent },
- { path: 'izrada-sajtova', component: WebComponent },
- { path: 'svi-proizvodi', component: SveComponent },
+  { path: 'blokovska-roba', component: BlokovskarobaComponent },
+  { path: 'fascikle', component: FascikleComponent },
+  { path: 'flajeri', component: FlajeriComponent },
+  { path: 'kalendari', component: KalendariComponent },
+  { path: 'rokovnici', component: RokovniciComponent },
+  { path: 'nalepnice', component: NalepniceComponent },
+  { path: 'kese', component: KeseComponent },
+  { path: 'knjige', component: KnjigeComponent },
+  { path: 'olovke', component: OlovkeComponent },
+  { path: 'upaljaci', component: UpaljaciComponent },
+  { path: 'reklamni-blokovi', component: ReklamniblokoviComponent },
+  { path: 'vizit-karte', component: VizitkeComponent },
+  { path: 'izrada-sajtova', component: WebComponent },
+  { path: 'proizvodni-program', component: SveComponent },
 ];
 
 @NgModule({

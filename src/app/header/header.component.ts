@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styles: []
 })
-export class HeaderComponent  {
+export class HeaderComponent implements OnInit {
+
+  @ViewChild('menuButton') menuButton: ElementRef;
 
   navitems = [
-    {name: 'Početna',     class: 'home',      link: '/proizvodi/svi-proizvodi'},
-    {name: 'Reference',   class: 'reference', link: '/reference'},
-    {name: 'Kontakt',     class: 'contact',   link: '/kontakt'},
-    {name: 'Motivacione mudrosti', class: 'books',  link: '/motivacione-mudrosti'}
+    { name: 'Proizvodni program', class: 'home', link: '/proizvodi/proizvodni-program' },
+    { name: 'Reference', class: 'reference', link: '/reference' },
+    { name: 'Kontakt', class: 'contact', link: '/kontakt' },
+    { name: 'Motivacione mudrosti', class: 'books', link: '/motivacione-mudrosti' }
   ];
+
+  ngOnInit() {
+    this.menuButton.nativeElement.click();
+  }
 }
