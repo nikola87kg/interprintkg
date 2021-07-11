@@ -3,22 +3,22 @@
 ************************/
 
 @font-face {
-    font-family: Roboto;
-    src: url("/assets/fonts/Roboto-Regular.ttf");
+	font-family: Roboto;
+	src: url("/assets/fonts/Roboto-Regular.ttf");
 }
 
 @mixin background-gradient($start-color, $end-color, $orientation) {
-    background: $start-color;
-    @if $orientation == 'vertical' {
-      background: -webkit-linear-gradient(top, $start-color, $end-color);
-      background: linear-gradient(to bottom, $start-color, $end-color);
-    } @else if $orientation == 'horizontal' {
-      background: -webkit-linear-gradient(left, $start-color, $end-color);
-      background: linear-gradient(to right, $start-color, $end-color);
-    } @else {
-      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
-      background: radial-gradient(ellipse at center, $start-color, $end-color);
-    }
+	background: $start-color;
+	@if $orientation == "vertical" {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == "horizontal" {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
 }
 
 body {
@@ -40,7 +40,7 @@ div.page-background {
 		position: absolute;
 		top: 25%;
 		width: 100%;
-		@media screen and (max-width:500px) {
+		@media screen and (max-width: 500px) {
 			top: 30%;
 			font-size: 28px;
 			margin: 0 5%;
@@ -49,15 +49,22 @@ div.page-background {
 	}
 }
 
-.bold-red {color: #CA1041; font-weight: bold}
-.white-block { background: white; }
-.gray-block { background: #eeeeee; }
+.bold-red {
+	color: #ca1041;
+	font-weight: bold;
+}
+.white-block {
+	background: white;
+}
+.gray-block {
+	background: #eeeeee;
+}
 
 .link {
 	cursor: pointer;
 	&:hover {
-	cursor: pointer;
-	box-shadow: 3px 3px 20px gray;
+		cursor: pointer;
+		box-shadow: 3px 3px 20px gray;
 	}
 }
 
@@ -67,40 +74,38 @@ div.page-background {
 }
 
 a {
-	text-decoration:none;
+	text-decoration: none;
 	color: inherit;
-	&:focus, &:active {
-		text-decoration:none;
+	&:focus,
+	&:active {
+		text-decoration: none;
 	}
-	 &:hover {
-		text-decoration:none;
+	&:hover {
+		text-decoration: none;
 		color: gray;
 	}
 }
 
-
-
-
-
-	/**************
+/**************
 	 2. NAVIGACIJA
 	***************/
 
 nav {
 	background: white !important;
 	min-height: 61px !important;
-	@media screen and (orientation:portrait) {
+	@media screen and (orientation: portrait) {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
-	a.navbar-brand {   /* LOGO */
+	a.navbar-brand {
+		/* LOGO */
 		padding-right: 15px;
 		font-weight: bold;
-		@media screen and (orientation:portrait) {
+		@media screen and (orientation: portrait) {
 			min-height: 50px !important;
 		}
 		img {
-			@media screen and (max-width:992px)  {
+			@media screen and (max-width: 992px) {
 				display: block;
 				margin: 0 auto;
 			}
@@ -108,62 +113,105 @@ nav {
 	}
 
 	div.navbar-collapse {
-		@media screen and (max-width:992px)  {
-			background: #1d5a82  !important;
+		@media screen and (max-width: 992px) {
+			background: #1d5a82 !important;
 			margin: 0 !important;
 		}
 		ul.navbar-nav {
 			user-select: none;
-			li {    /* STAVKE NAVIGACIJE */
+			li {
+				/* STAVKE NAVIGACIJE */
 				text-align: center;
 				min-width: 130px;
-				@media screen and (max-width:992px)  {
+				@media screen and (max-width: 992px) {
 					border-bottom: 2px solid white !important;
 				}
-				&:nth-of-type(1) { a.active {color: #2c3e50; } } // midnight blue
-				&:nth-of-type(2) { a.active {color: #2980b9; } } // belize hole
-				&:nth-of-type(3) { a.active {color: #0f715e; } } // green sea
-				&:nth-of-type(4) { a.active {color: #CA1041; } } // pomegranate
-				&:nth-of-type(5) { a.active {color: #d35400; } } // pumpkin
-				&:nth-of-type(6) { a.active {color: #8e44ad; } }
-				&:last-of-type   {
-					@media screen and (max-width:992px)  {
+				&:nth-of-type(1) {
+					a.active {
+						color: #2c3e50;
+					}
+				} // midnight blue
+				&:nth-of-type(2) {
+					a.active {
+						color: #2980b9;
+					}
+				} // belize hole
+				&:nth-of-type(3) {
+					a.active {
+						color: #0f715e;
+					}
+				} // green sea
+				&:nth-of-type(4) {
+					a.active {
+						color: #ca1041;
+					}
+				} // pomegranate
+				&:nth-of-type(5) {
+					a.active {
+						color: #d35400;
+					}
+				} // pumpkin
+				&:nth-of-type(6) {
+					a.active {
+						color: #8e44ad;
+					}
+				}
+				&:last-of-type {
+					@media screen and (max-width: 992px) {
 						margin-left: 0px;
 					}
 				}
 				a.nav-link {
-          color:white  !important;
-          font-size: 18px;
-          font-weight: bold;
-          text-transform: uppercase;
-          min-width: 150px;
+					color: white !important;
+					font-size: 18px;
+					font-weight: bold;
+					text-transform: uppercase;
+					min-width: 150px;
 
-					@media screen and (max-width:992px)  {
-						&:hover {color: black; font-weight: bold}
-						&.active {background: #e6e6e6 !important; color:black  !important;}
+					@media screen and (max-width: 992px) {
+						&:hover {
+							color: black;
+							font-weight: bold;
+						}
+						&.active {
+							background: #e6e6e6 !important;
+							color: black !important;
+						}
 					}
 
-					@media screen and (min-width:993px)  {
-            margin-right: 15px;
-            border-radius: 3px;
-						&:hover {color: white; }
-						&.active {color:white !important; }
-            &.home {
-              background: darken(#2980b9, 10);
-              &:hover { background: #2980b9; };
-            }
-            &.reference {
-              background: darken(#0f715e, 10);
-              &:hover { background: #0f715e; };
-            }
-            &.contact {
-              background: darken(#CA1041, 10);
-              &:hover { background: #CA1041; };
-            }
-            &.books {
-              background: darken(#c0492b, 10);
-              &:hover { background: #c0492b; };
-            }
+					@media screen and (min-width: 993px) {
+						margin-right: 15px;
+						border-radius: 3px;
+						&:hover {
+							color: white;
+						}
+						&.active {
+							color: white !important;
+						}
+						&.home {
+							background: darken(#2980b9, 10);
+							&:hover {
+								background: #2980b9;
+							}
+						}
+						&.reference {
+							background: darken(#0f715e, 10);
+							&:hover {
+								background: #0f715e;
+							}
+						}
+						&.contact {
+							background: darken(#ca1041, 10);
+							&:hover {
+								background: #ca1041;
+							}
+						}
+						&.books {
+							background: darken(#c0492b, 10);
+							&:hover {
+								background: #c0492b;
+							}
+						}
 					}
 				}
 			}
@@ -171,12 +219,7 @@ nav {
 	}
 }
 
-
-
-
-
-
-	/************
+/************
 	 3. SLAJDER
 	************/
 
@@ -184,43 +227,43 @@ div.carousel-item {
 	position: relative;
 	background: url("/assets/slider/slider.jpg") no-repeat center center;
 	background-size: cover;
-  img {
+	img {
 		position: absolute;
- 		box-shadow: -1px 0px 43px 7px rgba(0,0,0,1);
+		box-shadow: -1px 0px 43px 7px rgba(0, 0, 0, 1);
 		margin: auto;
-		left:0;
-		right:0;
-		bottom:0;
-		top:0;
-		max-width:70%;
-		max-height:80%;
-  }
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		max-width: 70%;
+		max-height: 80%;
+	}
 }
 
 div.izrada-sajtova-background {
 	background: url("/assets/slider/izrada.jpg") no-repeat top right;
 	background-size: contain;
-	height: calc(100vh - 70px)
+	height: calc(100vh - 70px);
 }
 
 div.carousel.slide {
-  max-height: calc(100vh - 62px) ;
-  overflow: hidden ;
+	max-height: calc(100vh - 62px);
+	overflow: hidden;
 	ol.carousel-indicators {
 		right: 8%;
-    top: 30px;
-    left: initial;
-    width: 150px;
-    margin: 0 !important;
+		top: 30px;
+		left: initial;
+		width: 150px;
+		margin: 0 !important;
 		li {
-				height: 20px;
-		    width: 20px;
-		    border-radius: 10px;
-		    margin-left: 10px;
-		    background-color: rgba(210, 210, 210, 0.7);
-		   	&:hover 	{
-		   		background-color:rgba(210, 210, 210, 0.9);
-		   	}
+			height: 20px;
+			width: 20px;
+			border-radius: 10px;
+			margin-left: 10px;
+			background-color: rgba(210, 210, 210, 0.7);
+			&:hover {
+				background-color: rgba(210, 210, 210, 0.9);
+			}
 		}
 		li.active {
 			background-color: rgba(51, 102, 255, 0.5);
@@ -230,7 +273,8 @@ div.carousel.slide {
 		}
 	}
 
-	.carousel-control-prev, .carousel-control-next {
+	.carousel-control-prev,
+	.carousel-control-next {
 		margin: auto 20px;
 		border-radius: 50%;
 		background: #0080ff;
@@ -246,19 +290,18 @@ div.carousel.slide {
 			height: calc(100vh - 61px);
 		}
 
-
 		div.carousel-caption {
-			    top: 30px;
-			    bottom: initial;
-			    right: 0;
-			    left: 0;
-			    background: rgba(0, 0, 0, 0.2);
+			top: 30px;
+			bottom: initial;
+			right: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.2);
 			h3 {
-			    margin-right: 5%;
-			    text-align: right;
+				margin-right: 5%;
+				text-align: right;
 				font-weight: bold;
 				font-size: 40px;
-				color: #CA1041;
+				color: #ca1041;
 				text-shadow: 1px 1px black;
 			}
 			p {
@@ -270,21 +313,20 @@ div.carousel.slide {
 				text-shadow: 1px 1px black;
 				color: white;
 				text-align: right;
-			    margin-right: 5%;
+				margin-right: 5%;
 			}
 		}
 	}
-
 }
-	/************
+/************
 	 4. SIDEBAR
 	************/
 
 div.sidebar {
 	padding: 20px;
-	width:  100%;
+	width: 100%;
 	@media screen and (max-width: 992px) {
-    	display: none !important;
+		display: none !important;
 	}
 	&.contact {
 		@media screen and (max-width: 992px) {
@@ -294,7 +336,7 @@ div.sidebar {
 	div.sidebar-box {
 		border: 1px solid #e6e6e6;
 		margin-bottom: 20px;
-		width:  100%;
+		width: 100%;
 		height: auto !important;
 		max-height: auto !important;
 		background: white;
@@ -303,14 +345,20 @@ div.sidebar {
 			box-shadow: 6px 6px 12px #e6e6e6;
 		}
 		div.sidebar-header {
-			background: #FF2801;
+			background: #ff2801;
 			font-weight: bold;
 			color: white;
 			line-height: 50px;
 			padding-left: 20px;
-			&.blue { background: #1d5a82 ; }
-			&.red { background: #C91040; }
-			i {padding-right: 10px;}
+			&.blue {
+				background: #1d5a82;
+			}
+			&.red {
+				background: #c91040;
+			}
+			i {
+				padding-right: 10px;
+			}
 		}
 		div.sidebar-items {
 			height: auto;
@@ -323,25 +371,35 @@ div.sidebar {
 					padding: 10px;
 					font-size: 18px;
 					border-bottom: 1px solid #e6e6e6;
-          a:hover {cursor: pointer;}
-          .pdf {
-            background: #1d5a82 ;
-            border-radius: 4px;
-            border: none;
-            color: white ;
-            font-size: 16px;
-            padding: 5px 15px;
-            cursor: pointer;
-            margin: 5px 10px 5px 0;
-            display: inline-block;
-            min-width: 190px;
-            &:hover { background: #256e9e ; }
-            &.download {
-              background: green;
-              &:hover { background: rgb(35, 167, 35); }
-            }
-          }
-					i {padding-right: 10px; width:30px; text-align: center}
+					a:hover {
+						cursor: pointer;
+					}
+					.pdf {
+						background: #1d5a82;
+						border-radius: 4px;
+						border: none;
+						color: white;
+						font-size: 16px;
+						padding: 5px 15px;
+						cursor: pointer;
+						margin: 5px 10px 5px 0;
+						display: inline-block;
+						min-width: 190px;
+						&:hover {
+							background: #256e9e;
+						}
+						&.download {
+							background: green;
+							&:hover {
+								background: rgb(35, 167, 35);
+							}
+						}
+					}
+					i {
+						padding-right: 10px;
+						width: 30px;
+						text-align: center;
+					}
 					&:hover {
 						background: #efefef;
 						cursor: pointer;
@@ -357,10 +415,10 @@ div.sidebar {
 					}
 					&.prodesign {
 						a {
-						color: #D5261D !important;
-						width: 100%;
-						height: 100%;
-						display: block;
+							color: #d5261d !important;
+							width: 100%;
+							height: 100%;
+							display: block;
 						}
 						&:hover {
 							color: #b42018 !important;
@@ -376,19 +434,18 @@ div.sidebar {
 	}
 }
 
-
-	/*************
+/*************
 	 5. PROIZVODI
 	*************/
 
 div.page-background.products {
-	@include background-gradient(#2980b9, #000000, 'horizontal');
+	@include background-gradient(#2980b9, #000000, "horizontal");
 }
 
 .menu-active {
 	font-weight: bold;
 	background: #e6e6e6;
-	color: #1d5a82  !important;
+	color: #1d5a82 !important;
 	transition: 0.5s;
 	&:focus {
 		outline: 0;
@@ -401,20 +458,20 @@ div.product-wrapper {
 	div.product-window {
 		border: 1px solid #e6e6e6;
 		margin-bottom: 20px;
-		width:  100%;
+		width: 100%;
 		background: white;
 		.window-header {
 			position: relative;
 			height: 50px;
 			padding: 0 20px;
-			@include background-gradient(#1d5a82, #000000, 'horizontal');
+			@include background-gradient(#1d5a82, #000000, "horizontal");
 			vertical-align: middle;
 			i {
 				padding-right: 10px;
 			}
 			a.button {
 				width: 100px;
-				@include background-gradient(#eaeaea, #ffffff, 'horizontal');
+				@include background-gradient(#eaeaea, #ffffff, "horizontal");
 				border: 1px solid lightgtray;
 				border-radius: 3px;
 				color: #043879;
@@ -426,8 +483,13 @@ div.product-wrapper {
 				vertical-align: middle;
 				font-weight: bold;
 				text-decoration: none;
-				i {	margin: 0 10px; }
-				&:hover {	text-decoration: none;	background: #eaeaea; }
+				i {
+					margin: 0 10px;
+				}
+				&:hover {
+					text-decoration: none;
+					background: #eaeaea;
+				}
 			}
 			a.back-button {
 				@extend a.button;
@@ -453,7 +515,7 @@ div.product-wrapper {
 		.product-content {
 			vertical-align: middle;
 			font-size: 18px;
-			margin:0;
+			margin: 0;
 			p {
 				margin-bottom: 0;
 				text-align: justify;
@@ -482,7 +544,7 @@ div.product-wrapper {
 		.product-content.calendar-wrapper {
 			padding: 0;
 			img.calendar {
-				width:100%;
+				width: 100%;
 				margin: 0;
 			}
 		}
@@ -490,66 +552,127 @@ div.product-wrapper {
 			padding: 20px;
 		}
 		.window-header.black {
-			background: #64307A;
-			h2 {text-align: center}
+			background: #64307a;
+			h2 {
+				text-align: center;
+			}
 		}
 		.window-header.purple {
-		  @include background-gradient(#350035, #64307A, 'horizontal');
-			h2 {text-align: center}
+			@include background-gradient(#350035, #64307a, "horizontal");
+			h2 {
+				text-align: center;
+			}
 		}
 	}
 }
 
-.segment-window:hover {box-shadow: -6px 6px 12px #e6e6e6;}
-.product-window:hover {box-shadow: -6px 6px 12px #e6e6e6;}
-
-.gallery { display: block; text-align: center !important; }
-.gallery img {vertical-align: top; margin:15px; width: 300px; max-width: 100%}
-.gallery img:hover {box-shadow: 3px 3px 20px gray }
-
-.gallery.blokce img 		{ width: auto; height: 350px;}
-.gallery.blokovska-roba img { width: auto; height:auto; max-height: 350px; max-width: 500px;}
-.gallery.fascikle img 	 	{ width: 400px}
-.gallery.kese img 	 		{ width: 100%; height: auto}
-.gallery.nalepnice img 	 	{ width: auto; height: 220px; }
-.gallery.rokovnici img	 	{ width: 100%; height: auto;}
-.gallery.knjige img	 		{ width: auto; height: 300px; max-width: 300px;}
-.gallery.olovke img	 		{ width: 100%; height: auto; }
-.gallery.upaljaci img	 	{ width: 100%; height: auto; }
-
-.gallery.nalepnice img { vertical-align: top; }
-.gallery.nalepnice img:nth-of-type(1) { width: 400px;	margin:15px; }
-.gallery.nalepnice img:nth-of-type(2) { width: 300px;	margin:15px; }
-.gallery.nalepnice img:nth-of-type(3) { width: 200px;	margin:15px; }
-
-.gallery.kalendari > *	 	{ width: 30%; height: auto; display: inline-block;
-  @media screen and (max-width:768px) { width: 100%  } }
-
-.gallery.kese span:first-of-type 	{
-	float:left;
-	width:60%;
-  @media screen and (max-width:768px) {
-    width: 100%;
-  }
+.segment-window:hover {
+	box-shadow: -6px 6px 12px #e6e6e6;
 }
-.gallery.kese span:last-of-type 	{
-	float:right;
-	width:25%;
+.product-window:hover {
+	box-shadow: -6px 6px 12px #e6e6e6;
+}
+
+.gallery {
+	display: block;
+	text-align: center !important;
+}
+.gallery img {
+	vertical-align: top;
+	margin: 15px;
+	width: 300px;
+	max-width: 100%;
+}
+.gallery img:hover {
+	box-shadow: 3px 3px 20px gray;
+}
+
+.gallery.blokce img {
+	width: auto;
+	height: 350px;
+}
+.gallery.blokovska-roba img {
+	width: auto;
+	height: auto;
+	max-height: 350px;
+	max-width: 500px;
+}
+.gallery.fascikle img {
+	width: 400px;
+}
+.gallery.kese img {
+	width: 100%;
+	height: auto;
+}
+.gallery.nalepnice img {
+	width: auto;
+	height: 220px;
+}
+.gallery.rokovnici img {
+	width: 100%;
+	height: auto;
+}
+.gallery.knjige img {
+	width: auto;
+	height: 300px;
+	max-width: 300px;
+}
+.gallery.olovke img {
+	width: 100%;
+	height: auto;
+}
+.gallery.upaljaci img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery.nalepnice img {
+	vertical-align: top;
+}
+.gallery.nalepnice img:nth-of-type(1) {
+	width: 400px;
+	margin: 15px;
+}
+.gallery.nalepnice img:nth-of-type(2) {
+	width: 300px;
+	margin: 15px;
+}
+.gallery.nalepnice img:nth-of-type(3) {
+	width: 200px;
+	margin: 15px;
+}
+
+.gallery.kalendari > * {
+	width: 30%;
+	height: auto;
+	display: inline-block;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.gallery.kese span:first-of-type {
+	float: left;
+	width: 60%;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+.gallery.kese span:last-of-type {
+	float: right;
+	width: 25%;
 	margin-right: 10%;
-  @media screen and (max-width:768px) {
-    width: 100%;
-  }
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 }
 
-
-
-
-	/**************
+/**************
 	 6. REFERENCE
 	**************/
 
 div.page-background.references {
-	@include background-gradient(#0f715e, #000000, 'horizontal');
+	@include background-gradient(#0f715e, #000000, "horizontal");
 }
 
 div.card-deck {
@@ -578,7 +701,7 @@ div.card-deck {
 				padding: 10px;
 				display: table-cell;
 				text-align: center;
-				margin:auto;
+				margin: auto;
 				vertical-align: middle;
 			}
 		}
@@ -594,18 +717,26 @@ div.card-deck {
 			div.read-more {
 				display: none;
 				position: absolute;
-				bottom: 0; left:0;	right:0;
-				margin:0; padding: 3px; width: 100%; height: 30px !important;
-				font-size: 16px;  font-weight: bold; opacity: 0.8;
-				background: white; color: steelblue;
-				@media screen and (max-width:992px)  {
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: 0;
+				padding: 3px;
+				width: 100%;
+				height: 30px !important;
+				font-size: 16px;
+				font-weight: bold;
+				opacity: 0.8;
+				background: white;
+				color: steelblue;
+				@media screen and (max-width: 992px) {
 					display: block !important;
 				}
 			}
 		}
 	}
 	div.prodesign-card {
-		background: #D5261D !important;
+		background: #d5261d !important;
 	}
 }
 
@@ -614,15 +745,15 @@ div.card-deck {
 	margin: 20px auto;
 	text-align: center;
 	width: 240px;
-	@media screen and (max-width:600px) {
+	@media screen and (max-width: 600px) {
 		display: block;
 		margin: auto;
 	}
-  	.card {
+	.card {
 		margin: 10px;
 		display: inline-block;
 		vertical-align: top;
-		@media screen and (max-width:600px) {
+		@media screen and (max-width: 600px) {
 			margin: 20px auto;
 			display: block;
 		}
@@ -634,31 +765,31 @@ div.card-deck {
 }
 
 .product.card-deck {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	.card {
 		padding: 0;
 		width: 300px;
 		min-width: 300px;
-    	max-width: 300px;
-    	margin-right: 25px;
+		max-width: 300px;
+		margin-right: 25px;
 		@media screen and (max-width: 690px) {
 			margin: 20px auto !important;
 		}
 		.logo-header {
-			border: 1px solid #1d5a82  !important;
+			border: 1px solid #1d5a82 !important;
 			width: 300px;
 			min-width: 300px;
 			height: 40px !important;
 			max-height: 40px !important;
-			background: #1d5a82 ;
+			background: #1d5a82;
 			h4.card-title {
 				height: 40px !important;
 				max-height: 40px !important;
 			}
 		}
 		.logo-holder {
-			border: 1px solid #1d5a82  !important;
+			border: 1px solid #1d5a82 !important;
 			width: 300px;
 			min-width: 300px;
 			height: 200px;
@@ -666,7 +797,7 @@ div.card-deck {
 			background-size: cover;
 		}
 		.logo-header.prodesign-card {
-			border: 1px solid #D5261D !important;
+			border: 1px solid #d5261d !important;
 		}
 		.logo-holder.vizitkarte {
 			background: url("/assets/proizvodi/vizit.jpg") no-repeat center center;
@@ -681,7 +812,7 @@ div.card-deck {
 			background-size: cover;
 		}
 		.logo-holder.flajeri {
-			background: url("/assets/proizvodi/flajeri-4000.jpg") no-repeat center center;
+			background: url("/assets/proizvodi/flajeri2021.jpg") no-repeat center center;
 			background-size: cover;
 		}
 		.logo-holder.blokovska-roba {
@@ -721,8 +852,8 @@ div.card-deck {
 			background-size: cover;
 		}
 		.logo-holder.prodesign {
-			border: 1px solid #D5261D !important;
-			background: #EDECE8;
+			border: 1px solid #d5261d !important;
+			background: #edece8;
 			img {
 				margin: auto;
 				max-width: 90%;
@@ -732,27 +863,19 @@ div.card-deck {
 	}
 }
 
-
-
-
-
-
-
-
-	/***********
+/***********
 	 7. KONTAKT
 	***********/
 
-
 div.page-background.contact {
-	@include background-gradient(#CA1041, #000000, 'horizontal');
+	@include background-gradient(#ca1041, #000000, "horizontal");
 }
 
 div.map-wrapper {
 	margin: 20px 0;
 	padding-right: 20px;
 	padding-left: 5px;
-	@media screen and (orientation:portrait) {
+	@media screen and (orientation: portrait) {
 		margin: 0;
 		padding-right: 5px;
 		.sebm-google-map-container {
@@ -761,7 +884,7 @@ div.map-wrapper {
 	}
 	.map-header {
 		height: 50px;
-		@include background-gradient(#CA1041, #000000, 'horizontal');
+		@include background-gradient(#ca1041, #000000, "horizontal");
 		font-weight: bold;
 		color: white;
 		line-height: 50px;
@@ -772,29 +895,26 @@ div.map-wrapper {
 			vertical-align: middle;
 			line-height: 50px;
 		}
-		i { margin-right: 12px;}
+		i {
+			margin-right: 12px;
+		}
 	}
 }
 
 .sebm-google-map-container {
-  height: 500px;
+	height: 500px;
 }
 
 div.sebm-google-map-container-inner {
-	border: 1px solid #E6E6E6;
+	border: 1px solid #e6e6e6;
 }
 
-
-
-
-
-
-	/***************
+/***************
 	 8. MUDRE MISLI
 	***************/
 
 div.page-background.mudremisli {
-	@include background-gradient(#c0392b, #000000, 'horizontal');
+	@include background-gradient(#c0392b, #000000, "horizontal");
 }
 
 div.knjige {
@@ -805,9 +925,15 @@ div.knjige {
 		position: relative;
 		background: #ffe0b7;
 		border: 3px solid #c0392b;
-		@media screen and (max-width:1300px) { padding-top: 100px; }
-		@media screen and (max-width:768px)  { padding-top: 0;     }
-		@media screen and (max-width:568px)  { padding-top: 100px; }
+		@media screen and (max-width: 1300px) {
+			padding-top: 100px;
+		}
+		@media screen and (max-width: 768px) {
+			padding-top: 0;
+		}
+		@media screen and (max-width: 568px) {
+			padding-top: 100px;
+		}
 		&:hover {
 			box-shadow: 3px 3px 20px gray;
 		}
@@ -846,16 +972,18 @@ div.knjige {
 				top: 70px;
 			}
 			&.desktop-only {
-				@media (orientation: portrait)  {
+				@media (orientation: portrait) {
 					display: none;
 				}
 			}
 			&.mobile-only {
-				@media (orientation: landscape)   {
+				@media (orientation: landscape) {
 					display: none;
 				}
 			}
-			&:hover, &:active, &:focus {
+			&:hover,
+			&:active,
+			&:focus {
 				text-decoration: none;
 				cursor: pointer;
 				font-size: 17px;
@@ -863,12 +991,12 @@ div.knjige {
 		}
 	}
 }
-	/**********
+/**********
 	 9. FOOTER
 	**********/
 
 footer {
- 	position: relative;
+	position: relative;
 	margin-top: 30px;
 	border-top: 5px solid #283848;
 	padding: 10px;
@@ -876,38 +1004,43 @@ footer {
 	background: #34495e;
 	img {
 		display: block;
-		margin:20px auto ;
+		margin: 20px auto;
 		text-align: center;
 		width: 200px;
 	}
 	div.mail {
-		margin:15px auto ;
+		margin: 15px auto;
 		width: 330px;
 		max-width: 95%;
 		text-align: center;
 		padding: 10px 15px;
 		color: #e2e2e2;
 		background: rgba(255, 255, 255, 0.2);
-		border:  1px solid white;
+		border: 1px solid white;
 		border-radius: 4px;
 	}
 	div.phone {
-		margin:10px auto;
+		margin: 10px auto;
 		max-width: 95%;
 		text-align: center;
 		font-size: 18px;
 		color: white;
-		span.separator {margin: 0 10px;}
+		span.separator {
+			margin: 0 10px;
+		}
 		a {
-		color: white;
-		font-size: 15px;
-		text-decoration: none;
-		&:hover { color: gray; cursor: pointer;}
+			color: white;
+			font-size: 15px;
+			text-decoration: none;
+			&:hover {
+				color: gray;
+				cursor: pointer;
+			}
 		}
 	}
 	hr {
-	  border-color: darkgrey;
-    margin-bottom: 0;
+		border-color: darkgrey;
+		margin-bottom: 0;
 		position: absolute;
 		bottom: 40px;
 		margin-left: 10%;
