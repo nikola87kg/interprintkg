@@ -32,7 +32,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.3",
+    "@angular/cli": "15.0.4",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.43",
@@ -46,7 +46,7 @@
     "file-loader": "^0.10.0",
     "font-awesome": "^4.7.0",
     "font-awesome-sass-loader": "^2.0.1",
-    "istanbul-instrumenter-loader": "^2.0.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "jquery": "^3.2.1",
@@ -66,14 +66,14 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.3",
     "script-loader": "^0.7.0",
-    "source-map-loader": "^0.1.5",
+    "source-map-loader": "^4.0.1",
     "style-loader": "^0.13.1",
     "stylus-loader": "^3.0.1",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
     "url-loader": "^0.5.7",
-    "webpack": "~2.2.0",
+    "webpack": "~5.75.0",
     "webpack-dev-server": "~2.4.2"
   }
 }
