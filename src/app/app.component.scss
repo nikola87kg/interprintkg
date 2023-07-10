@@ -800,8 +800,10 @@ div.card-deck {
 			border: 1px solid #d5261d !important;
 		}
 		.logo-holder.vizitkarte {
-			background: url("/assets/proizvodi/vizit.jpg") no-repeat center center;
-			background-size: cover;
+			background: url("/assets/proizvodi/interprint_vizit.png") no-repeat center center;
+			padding: 0 10px;
+			background-origin: content-box;
+			background-size: contain;
 		}
 		.logo-holder.knjige {
 			background: url("/assets/proizvodi/knjige.jpg") no-repeat center center;
