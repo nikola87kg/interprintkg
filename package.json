@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4800",
+    "start": "ng serve --host 0.0.0.0 --port 4800 --disable-host-check",
     "prod": "ng build --prod --aot=false"
   },
   "private": true,

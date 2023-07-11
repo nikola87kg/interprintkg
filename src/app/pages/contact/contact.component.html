@@ -5,20 +5,25 @@
 	</div>
 
 	<div class="row">
-	 	<div class="col-12 col-md-4 col-lg-3 sidebar contact">
+		<div class="col-12 col-md-4 col-lg-3 sidebar contact">
 			<div class="sidebar-box">
 				<div class="sidebar-header red">
-					 <i class="fa fa-bars"  ></i> KONTAKT PODACI
-			  </div>
+					<i class="fa fa-bars"></i> KONTAKT PODACI
+				</div>
 				<div class="sidebar-items">
 					<ul>
-						<li> <a  href="tel:+381692120202"> <i class="fa fa-mobile" 	 ></i> 069 212 02 02</a>  </li>
-						<li> <a  href="tel:+381692120201"> <i class="fa fa-mobile" 	 ></i> 069 212 02 01</a> </li>
-						<li> <a  href="mailto:interprintkg@gmail.com?Subject=Upit%20o%20ponudi%20-%20InterPrint" target="_top"> <i class="fa fa-envelope"   ></i> interprintkg@gmail.com </a></li>
-						<li> <i class="fa fa-home" 		 ></i> Kragujevac, J. Gagarina 12 </li>
+						<li> <a href="tel:+381692120202"> <i class="fa fa-mobile"></i> 069
+								212 02 02</a> </li>
+						<li> <a href="tel:+381692120201"> <i class="fa fa-mobile"></i> 069
+								212 02 01</a> </li>
+						<li> <a
+								href="mailto:interprintkg@gmail.com?Subject=Upit%20o%20ponudi%20-%20InterPrint"
+								target="_top"> <i class="fa fa-envelope"></i>
+								interprintkg@gmail.com </a></li>
+						<li> <i class="fa fa-home"></i> Kragujevac, Aleksinačka b.b </li>
 						<li>
 							<a href="http://www.facebook.com/interprintkg">
-								<i class="fa fa-facebook" 	 ></i>
+								<i class="fa fa-facebook"></i>
 								Interprint Kragujevac
 							</a>
 						</li>
@@ -27,8 +32,8 @@
 			</div>
 			<div class="sidebar-box">
 				<div class="sidebar-header red">
-					 <i class="fa fa-bars"  ></i> POSLOVNI PODACI
-			  </div>
+					<i class="fa fa-bars"></i> POSLOVNI PODACI
+				</div>
 				<div class="sidebar-items">
 					<ul>
 						<li> <b>SZR - Grafički centar INTERPRINT</b></li>
@@ -36,51 +41,70 @@
 						<li> PIB: SR 100558426 </li>
 						<li> Matični broj: 54426631 </li>
 						<li> PDV obveznik: DA </li>
-						<li> Sber banka - tekući račun: <br>285-2511050000243-09</li>
-						<li> Eurobanka - tekući račun: <br>250-4010001355780-96</li>
+						<li> ProCredit bank - tekući račun: <br>220-158794-77</li>
 					</ul>
 				</div>
 			</div>
 			<div class="sidebar-box">
 				<div class="sidebar-header red">
-					 <i class="fa fa-bars"  ></i> APR OBRASCI
-			  </div>
+					<i class="fa fa-bars"></i> APR OBRASCI
+				</div>
 				<div class="sidebar-items">
 					<ul>
 						<li class="no-hover">
-              <a class="pdf" href="./assets/apr/obrasci.pdf">
-                <i class="fa fa-eye"  ></i>
-                Pogledaj online
-              </a>
-              <br>
-              <a class="pdf download" href="./assets/apr/obrasci.pdf" download="apr-obrasci.pdf">
-                <i class="fa fa-book"  ></i>
-                Preuzmi PDF
-              </a>
-            </li>
+							<a class="pdf"
+								href="./assets/apr/obrasci.pdf">
+								<i class="fa fa-eye"></i>
+								Pogledaj online
+							</a>
+							<br>
+							<a class="pdf download"
+								href="./assets/apr/obrasci.pdf"
+								download="apr-obrasci.pdf">
+								<i class="fa fa-book"></i>
+								Preuzmi PDF
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
-	   </div>
+		</div>
+		
+		<div class="col-12 col-md-4 col-lg-3">
+			<div class="map-wrapper">
+				<div class="map-header">
+					<h3> <i class="fa fa-bars"></i>MAPA</h3>
+				</div>
+					<img class="real-map" src="assets/proizvodi/mapa_2023.jpg" alt="mapa">
+			</div>
+		</div>
 
-	   <div class="col-12  col-md-8 col-lg-9">
-	     <div class="map-wrapper">
-     	 	 <div  class="map-header">
-	 				 <h3> <i class="fa fa-bars"  ></i>LOKACIJA</h3>
-				 </div>
+		<div class="col-12 col-md-4 col-lg-6">
+			<div class="map-wrapper">
+				<div class="map-header">
+					<h3> <i class="fa fa-bars"></i>LOKACIJA</h3>
+				</div>
 
-				 <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="true">
-				   <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-			       <sebm-google-map-circle [latitude]="lat" [longitude]="lng"
-				      [radius]="50"
-				      [fillColor]="'red'"
-				      [circleDraggable]="false"
-				      [editable]="false">
-				   </sebm-google-map-circle>
-				 </sebm-google-map>
-	     </div>
-	   </div>
-   </div>
+				<sebm-google-map [latitude]="lat"
+					[longitude]="lng"
+					[zoom]="zoom"
+					[disableDefaultUI]="false"
+					[zoomControl]="true">
+					<sebm-google-map-marker [latitude]="lat"
+						[longitude]="lng"></sebm-google-map-marker>
+					<sebm-google-map-circle [latitude]="lat"
+						[longitude]="lng"
+						[radius]="50"
+						[fillColor]="'red'"
+						[circleDraggable]="false"
+						[editable]="false">
+					</sebm-google-map-circle>
+				</sebm-google-map>
+			</div>
+
+		</div>
+
+	</div>
 
 </div>
 

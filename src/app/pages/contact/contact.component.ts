@@ -8,9 +8,9 @@ declare var $: any;
 })
 export class ContactComponent implements OnInit {
 
-  lat = 44.0308151;
-  lng = 20.9172295;
-  zoom = 14;
+  lat = 44.04716376;
+  lng = 20.9131693;
+  zoom = 15;
   hue = 'red';
 
   constructor() { }
