@@ -1,13 +1,15 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styles: []
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  @ViewChild('menuButton') menuButton: ElementRef;
+  @ViewChild('menuButton') menuButton!: ElementRef;
+
+  public menuExpanded = true;
 
   navitems = [
     { name: 'Proizvodni program', class: 'home', link: '/proizvodi/proizvodni-program' },
@@ -16,7 +18,7 @@ export class HeaderComponent implements OnInit {
     { name: 'Motivacione mudrosti', class: 'books', link: '/motivacione-mudrosti' }
   ];
 
-  ngOnInit() {
-    this.menuButton.nativeElement.click();
+  toggleMenu() {
+    this.menuExpanded = !this.menuExpanded;
   }
 }

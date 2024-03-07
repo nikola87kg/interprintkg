@@ -5,27 +5,42 @@
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-md-4 col-lg-3 sidebar contact">
+		<div class="sidebar contact">
+
 			<div class="sidebar-box">
 				<div class="sidebar-header red">
 					<i class="fa fa-bars"></i> KONTAKT PODACI
 				</div>
 				<div class="sidebar-items">
 					<ul>
-						<li> <a href="tel:+381692120202"> <i class="fa fa-mobile"></i> 069
-								212 02 02</a> </li>
-						<li> <a href="tel:+381692120201"> <i class="fa fa-mobile"></i> 069
-								212 02 01</a> </li>
-						<li> <a href="viber://chat?number=+381692120201"> <i class="fa fa-mobile"></i> Viber 069
-								212 02 01</a> </li>
-						<li> <a
-								href="mailto:interprintkg@gmail.com?Subject=Upit%20o%20ponudi%20-%20InterPrint"
+						<li>
+							<a href="tel:+381692120202">
+								<i class="fa fa-mobile"></i>
+								Telefon: 069 212 02 02
+							</a>
+						</li>
+						<li>
+							<a href="tel:+381692120201">
+								<i class="fa fa-mobile"></i>
+								Telefon / Viber: 069 620 320
+							</a>
+						</li>
+						<li>
+							<a href="viber://chat?number=+381692120201">
+								<i class="fa fa-mobile"></i>
+								Telefon / Viber: 069 212 02 01
+							</a>
+						</li>
+						<li>
+							<a href="mailto:interprintkg@gmail.com?Subject=Upit%20o%20ponudi%20-%20InterPrint"
 								target="_top"> <i class="fa fa-envelope"></i>
-								interprintkg@gmail.com </a></li>
+								{{mail}} </a>
+						</li>
 						<li> <i class="fa fa-home"></i> Kragujevac, Aleksinačka b.b. </li>
 					</ul>
 				</div>
 			</div>
+
 			<div class="sidebar-box">
 				<div class="sidebar-header red">
 					<i class="fa fa-bars"></i> POSLOVNI PODACI
@@ -44,7 +59,7 @@
 			<div class="sidebar-box">
 
 				<div class="sidebar-header red">
-					<i class="fa fa-bars"></i> 
+					<i class="fa fa-bars"></i>
 					APR OBRASCI
 				</div>
 
@@ -67,7 +82,7 @@
 								<i class="fa fa-book"></i>
 								APR 2023 - Preuzmi PDF
 							</a>
-							
+
 						</li>
 
 						<li class="no-hover">
@@ -86,7 +101,7 @@
 								<i class="fa fa-book"></i>
 								APR 2006 - Preuzmi PDF
 							</a>
-							
+
 						</li>
 
 					</ul>
@@ -94,23 +109,28 @@
 
 			</div>
 		</div>
-		
-		<div class="col-12 col-md-4 col-lg-3">
-			<div class="map-wrapper">
-				<div class="map-header">
-					<h3> <i class="fa fa-bars"></i>MAPA</h3>
+
+		<div class="maps">
+			<div class="contact-map">
+				<div class="map-wrapper">
+					<div class="map-header">
+						<h3> <i class="fa fa-bars"></i>MAPA</h3>
+					</div>
+					<img class="real-map"
+						src="assets/proizvodi/mapa_2023.jpg"
+						alt="mapa">
 				</div>
-					<img class="real-map" src="assets/proizvodi/mapa_2023.jpg" alt="mapa">
 			</div>
-		</div>
 
-		<div class="col-12 col-md-4 col-lg-6">
-			<div class="map-wrapper">
-				<div class="map-header">
-					<h3> <i class="fa fa-bars"></i>LOKACIJA</h3>
-				</div>
+			<div class="contact-location">
+				<div class="map-wrapper">
+					<div class="map-header">
+						<h3> <i class="fa fa-bars"></i>LOKACIJA</h3>
+					</div>
 
-				<sebm-google-map [latitude]="lat"
+					<div id="map"
+						style="height: 600px; width: 100%;"></div>
+					<!-- 	<sebm-google-map [latitude]="lat"
 					[longitude]="lng"
 					[zoom]="zoom"
 					[disableDefaultUI]="false"
@@ -124,9 +144,10 @@
 						[circleDraggable]="false"
 						[editable]="false">
 					</sebm-google-map-circle>
-				</sebm-google-map>
-			</div>
+				</sebm-google-map> -->
+				</div>
 
+			</div>
 		</div>
 
 	</div>

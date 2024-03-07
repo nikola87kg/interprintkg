@@ -1,32 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
 
-  <button class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          #menuButton
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="header-bar">
+    <button class="navbar-toggler navbar-toggler-right"
+      (click)="toggleMenu()"
+      type="button"
+      #menuButton>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <a class="navbar-brand"
-     routerLink="/home">
-    <img src="./assets/ip-logo-wide.jpg"
-         style="width: 320px;" />
-  </a>
+    <a class="navbar-brand"
+      routerLink="/home">
+      <img src="./assets/ip-logo-wide.jpg" />
+    </a>
+  </div>
 
-  <div class="collapse navbar-collapse"
-       id="navbarSupportedContent">
+  <div *ngIf="menuExpanded"
+    class="navbar-collapse"
+    id="navbarSupportedContent">
 
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item"
-          *ngFor="let item of navitems">
+        *ngFor="let item of navitems">
         <a class="nav-link"
-           [ngClass]="item.class"
-           [routerLink]="item.link"
-           routerLinkActive="active">
+          [ngClass]="item.class"
+          [routerLink]="item.link"
+          routerLinkActive="active">
           {{item.name}}
         </a>
       </li>

@@ -1,22 +1,20 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
+/* import { AgmCoreModule } from 'angular2-google-maps/core'; */
+/* import { Ng2PageScrollModule } from 'ng2-page-scroll'; */
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule, Routes, Router } from '@angular/router';
-
-import { AgmCoreModule } from 'angular2-google-maps/core';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { ReferencesComponent } from './pages/references/references.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MudremisliComponent } from './pages/mudremisli/mudremisli.component';
-import { FooterComponent } from './footer/footer.component';
-
+import { ProductsComponent } from './pages/products/products.component';
 import { ProductsModule, productsRoutes } from './pages/products/products.module';
-import { HeaderComponent } from './header/header.component';
+import { ReferencesComponent } from './pages/references/references.component';
 
 const appRoutes: Routes = [
   { path: 'kontakt', component: ContactComponent },
@@ -41,10 +39,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNO5kdusRR1oxgM6Kwe3XVuUpYJSz6pzg' }),
+    /* AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNO5kdusRR1oxgM6Kwe3XVuUpYJSz6pzg' }), */
     RouterModule.forRoot(appRoutes, { useHash: true }),
-    Ng2PageScrollModule.forRoot(),
+    /* Ng2PageScrollModule.forRoot(), */
     ProductsModule
   ],
   providers: [Title],
